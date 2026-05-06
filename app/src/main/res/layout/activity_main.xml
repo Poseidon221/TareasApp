@@ -13,7 +13,13 @@
         android:text="➕ Agregar tarea"
         android:backgroundTint="#4CAF50"
         android:textColor="#FFFFFF"/>
-
+    <!-- Mostrar tareas -->
+    <Button
+        android:id="@+id/btnMostrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MOSTRAR TAREAS"
+        android:layout_margin="8dp"/>
     <!-- Lista de tareas -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerTasks"

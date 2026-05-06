@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     TaskAdapter adapter;
     DBHelper db;
     ArrayList<Task> list;
-    Button btnAdd;
+    Button btnAdd, btnMostrar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerTasks);
         btnAdd = findViewById(R.id.btnAddTask);
+        btnMostrar = findViewById(R.id.btnMostrar);
 
         db = new DBHelper(this);
 
@@ -34,13 +35,15 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, AddEditTaskActivity.class);
             startActivity(intent);
         });
+
+        btnMostrar.setOnClickListener(v -> {
+            loadData();
+        });
     }
 
     private void loadData() {
         list = db.getAllTasks();
-
         adapter = new TaskAdapter(list);
-
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
     }
@@ -48,6 +51,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        loadData(); // refresca la lista cuando vuelves del formulario
+        loadData();
     }
 }
