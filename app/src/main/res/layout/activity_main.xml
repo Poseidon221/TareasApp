@@ -4,16 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F5F5F5"
+    android:background="#2D4059"
     android:padding="16dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp"
-        android:layout_marginBottom="16dp"
-        >
+        app:cardCornerRadius="18dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#415A77"
+        android:layout_marginBottom="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,24 +24,28 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="REGISTRO DE ARTICULOS"
+                android:text="REGISTRO DE TAREAS"
                 android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="#212121"
-                android:layout_marginBottom="16dp"
-                />
+                android:textSize="22sp"
+                android:textColor="#F8FAFC"
+                android:layout_marginBottom="16dp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="8dp"
+                app:boxBackgroundColor="#577590"
+                app:boxStrokeColor="#93C5FD"
+                app:hintTextColor="#D6E4F0">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etCodigo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Codigo del producto"
+                    android:hint="Codigo de la tarea"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#D6E4F0"
                     android:inputType="number" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -50,13 +54,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="8dp"
+                app:boxBackgroundColor="#577590"
+                app:boxStrokeColor="#93C5FD">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etDescripcion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Descripcion"
+                    android:hint="Descripción de la tarea"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#D6E4F0"
                     android:inputType="textCapSentences" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -65,13 +73,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="8dp"
+                app:boxBackgroundColor="#577590"
+                app:boxStrokeColor="#93C5FD">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etPrecio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Precio ($)"
+                    android:hint="Presupuesto ($)"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#D6E4F0"
                     android:inputType="numberDecimal" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -81,7 +93,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:text="¿Articulo en oferta?"
+                android:text="¿Tarea urgente?"
+                android:textColor="#F8FAFC"
                 android:textSize="16sp" />
 
             <ProgressBar
@@ -90,14 +103,16 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:visibility="gone"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginBottom="8dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnRegistrar"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="GUARDAR ARTICULO"
-                app:cornerRadius="16dp"/>
+                android:text="GUARDAR TAREA"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#2563EB"
+                app:cornerRadius="16dp" />
 
         </LinearLayout>
 
@@ -114,12 +129,11 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Filtrar"
+            android:text="Urgentes"
             android:layout_marginEnd="4dp"
-            app:strokeColor="#4CAF50"
-            android:textColor="#4CAF50"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            />
+            app:strokeColor="#93C5FD"
+            android:textColor="#93C5FD"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBuscar"
@@ -128,10 +142,9 @@
             android:layout_height="wrap_content"
             android:text="Buscar"
             android:layout_marginEnd="4dp"
-            app:strokeColor="#009688"
-            android:textColor="#009688"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            />
+            app:strokeColor="#93C5FD"
+            android:textColor="#93C5FD"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnEditar"
@@ -140,10 +153,9 @@
             android:layout_height="wrap_content"
             android:text="Editar"
             android:layout_marginEnd="4dp"
-            app:strokeColor="#FF9800"
-            android:textColor="#FF9800"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            />
+            app:strokeColor="#93C5FD"
+            android:textColor="#93C5FD"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBorrar"
@@ -152,22 +164,20 @@
             android:layout_height="wrap_content"
             android:text="Borrar"
             android:layout_marginEnd="4dp"
-            app:strokeColor="#F44336"
-            android:textColor="#F44336"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            />
+            app:strokeColor="#93C5FD"
+            android:textColor="#93C5FD"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
 
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Inventario Actual"
-        android:textSize="18sp"
+        android:text="Agenda Actual"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="#212121"
-        android:layout_marginBottom="8dp"
-        />
+        android:textColor="#F8FAFC"
+        android:layout_marginBottom="8dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvArticulos"

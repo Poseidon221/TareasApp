@@ -6,38 +6,35 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="6dp"
-    app:cardBackgroundColor="@android:color/white">
+    app:cardCornerRadius="14dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="#415A77">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="16dp"
-        android:gravity="center_horizontal" >
+        android:gravity="center_vertical">
 
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:src="@drawable/ic_carrito"
-            app:tint="@color/colorPrimary"
-            android:layout_marginEnd="16dp"
-            />
+            android:src="@drawable/baseline_electric_rickshaw_24"
+            app:tint="#D6E4F0"
+            android:layout_marginEnd="16dp" />
 
         <TextView
             android:id="@+id/tvItemCodigo"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@color/colorPrimary"
+            android:background="#1E3A5F"
             android:textColor="@android:color/white"
             android:text="101"
             android:textStyle="bold"
             android:textSize="16sp"
             android:gravity="center"
-            android:layout_marginEnd="16dp"
-            android:backgroundTint="@color/colorPrimary"
-            />
+            android:layout_marginEnd="16dp" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -49,21 +46,19 @@
                 android:id="@+id/tvItemDescripcion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nombre del Articulo"
+                android:text="Descripción de la tarea"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:textColor="#212121"
-                />
+                android:textColor="#F8FAFC" />
 
             <TextView
                 android:id="@+id/tvItemPrecio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="$0.0"
-                android:textColor="#388E3C"
+                android:textColor="#93C5FD"
                 android:textSize="16sp"
-                android:layout_marginTop="4dp"
-                />
+                android:layout_marginTop="4dp" />
 
         </LinearLayout>
 
@@ -71,24 +66,25 @@
             android:id="@+id/tvItemEstado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DISPONIBLE"
+            android:text="PENDIENTE"
             android:textSize="12sp"
             android:textStyle="bold"
             android:textColor="#FFFFFF"
-            android:background="#4CAF50"
-            android:padding="4dp"
-            />
+            android:background="#2563EB"
+            android:padding="6dp"
+            android:layout_marginEnd="6dp" />
 
         <TextView
             android:id="@+id/tvOferta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Oferta"
+            android:text="URGENTE"
             android:textSize="12sp"
             android:textStyle="bold"
             android:textColor="#FFFFFF"
-            android:background="#4CAF50"
-            android:padding="4dp"
-            />
+            android:background="#5B7DB1"
+            android:padding="6dp" />
+
     </LinearLayout>
+
 </androidx.cardview.widget.CardView>

@@ -32,21 +32,26 @@ public class ArticuloAdapter extends RecyclerView.Adapter<ArticuloAdapter.Articu
 
         holder.tvCodigo.setText(String.valueOf(articuloActual.getCodigo()));
         holder.tvDescripcion.setText(articuloActual.getDescripcion());
-        holder.tvPrecio.setText("$ " + articuloActual.getPrecio());
-        holder.tvOferta.setEnabled(articuloActual.isOferta());
+        holder.tvPrecio.setText("Costo: $ " + articuloActual.getPrecio());
 
-        if(articuloActual.getPrecio() >= 100000){
-            holder.tvEstado.setText("PREMIUM");
-            holder.tvEstado.setBackgroundColor(android.graphics.Color.parseColor("#FFC107"));
+        holder.tvEstado.setText("PENDIENTE");
+        holder.tvEstado.setBackgroundColor(
+                android.graphics.Color.parseColor("#2563EB")
+        );
+
+        if (articuloActual.isOferta()) {
+            holder.tvOferta.setText("URGENTE");
+            holder.tvOferta.setVisibility(View.VISIBLE);
         } else {
-            holder.tvEstado.setText("ESTANDAR");
-            holder.tvEstado.setBackgroundColor(android.graphics.Color.parseColor("#4CAF50"));
+            holder.tvOferta.setVisibility(View.GONE);
         }
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(), "Seleccionaste: " + articuloActual.getDescripcion(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(v.getContext(),
+                        "Tarea: " + articuloActual.getDescripcion(),
+                        Toast.LENGTH_SHORT).show();
             }
         });
     }

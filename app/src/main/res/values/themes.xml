@@ -1,9 +1,34 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.InventarioApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+    <style name="Base.Theme.InventarioApp"
+        parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Color principal -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+        <!-- Contenedores -->
+        <item name="colorPrimaryContainer">
+            @color/colorPrimaryDark
+        </item>
+
+        <!-- Secundario -->
+        <item name="colorSecondary">
+            @color/colorSecundario
+        </item>
+
+        <!-- Barra superior -->
+        <item name="android:statusBarColor">
+            @color/colorPrimaryDark
+        </item>
+
+        <!-- Barra inferior -->
+        <item name="android:navigationBarColor">
+            @color/colorPrimaryDark
+        </item>
+
     </style>
 
-    <style name="Theme.InventarioApp" parent="Base.Theme.InventarioApp" />
+    <style name="Theme.InventarioApp"
+        parent="Base.Theme.InventarioApp" />
+
 </resources>
